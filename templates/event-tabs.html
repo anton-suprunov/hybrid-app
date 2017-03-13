@@ -1,0 +1,13 @@
+<div data-role="navbar" class="single-event-dates header-subtabs">
+    <ul>
+        {{#each links}}
+        {{#if this}}
+        <li>
+            {{{this}}}
+        </li>
+        {{else}}
+        <li></li>
+        {{/if}}
+        {{/each}}
+    </ul>
+</div>

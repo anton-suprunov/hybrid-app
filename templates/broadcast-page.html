@@ -1,0 +1,42 @@
+<div class="broadcast">
+
+    {{#ifEq streamIsActive undefined}}
+
+        <h3 class="ui-bar ui-bar-a ui-corner-all">
+            Stream is not available at the moment, please try again later.
+        </h3>
+
+    {{else}}
+
+        {{#ifEq streamIsActive true}}
+
+            <div class="broadcast-container">
+                <div class="broadcast-player" id="broadcast-player-{{id}}">Loading the player...</div>
+                <div class="broadcast-player-message"></div>
+            </div>
+
+            <div class="broadcast-info">
+                {{#if pageTitle}}
+                <h3 class="broadcast-title">Now Watching: {{pageTitle}}</h3>
+                {{/if}}
+
+                {{#if pageLeadin}}
+                    <p class="broadcast-leadin">{{pageLeadin}}</p>
+                {{/if}}
+            </div>
+
+        {{else}}
+
+            <h3 class="ui-bar ui-bar-a ui-corner-all">
+                {{pageTitle}} is offline. If your event is about to begin please stand by.
+            </h3>
+
+            {{#if pageLeadin}}
+                <div class="broadcast-info">
+                    <p class="broadcast-leadin">{{pageLeadin}}</p>
+                </div>
+            {{/if}}
+
+        {{/ifEq}}
+    {{/ifEq}}
+</div>

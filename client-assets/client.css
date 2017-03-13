@@ -1,0 +1,37 @@
+/* ACTIVE STATE COLOR */
+.ui-header,
+.footer .ui-btn-active,
+.headlines-twitter-subtabs .main-trigger.ui-btn-active,
+.sports-panel ul li a.ui-btn-active,
+.ui-btn-active,
+.schedule-list .date-container > span:first-child,
+.nav-header {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#d42b32), to(#ae2329));
+  background-image: -webkit-linear-gradient(#d42b32, #ae2329);
+  background-image: -moz-linear-gradient(#d42b32, #ae2329);
+  background-image: -ms-linear-gradient(#d42b32, #ae2329);
+  background-image: -o-linear-gradient(#d42b32, #ae2329);
+  background-image: linear-gradient(#d42b32, #ae2329);
+}
+/* FOCUS COLOR
+.ui-focus,
+.ui-btn:focus {
+	-moz-box-shadow:inset 0 0 3px @appColor,0px 0 9px @appColor;
+	-webkit-box-shadow:inset 0 0 3px @appColor,0px 0 9px @appColor;
+	box-shadow:inset 0 0 3px @appColor,0px 0 9px @appColor;
+}
+*/
+.ui-input-text:focus,
+.ui-input-search:focus {
+  -moz-box-shadow: 0 0 12px #c1272d;
+  -webkit-box-shadow: 0 0 12px #c1272d;
+  box-shadow: 0 0 12px #c1272d;
+}
+.ui-mobile .ui-btn:focus {
+  box-shadow: inset 0 0 3px #c1272d, 0px 0 9px #c1272d !important;
+}
+/* LINK COLOR */
+.ui-page-theme-a a,
+.ui-page-theme-a a:visited {
+  color: #c1272d;
+}

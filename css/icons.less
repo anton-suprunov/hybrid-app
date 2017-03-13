@@ -1,0 +1,120 @@
+/* icons */
+.icon {
+    display: block;
+    width: 54px;
+    background-repeat: no-repeat;
+}
+
+.icon.icon-header {
+    position: absolute;
+    top: 0;
+    height: 100%;
+}
+
+.icon.icon-header-left { left: 0; }
+.icon.icon-header-right { right: 0; }
+
+.icon:active { opacity:0.8 }
+
+.icon-list {
+    background-image:url("../images/icons/list.png");
+    background-position:  15px 20px;
+
+    background-size: 20px 13px;
+    -moz-background-size: 20px 13px;
+    -webkit-background-size: 20px 13px;
+}
+
+.icon-refresh {
+    background-image: url("../images/icons/refresh.png");
+    background-position: 20px 17px;
+
+    background-size: 18px 20px;
+    -moz-background-size: 18px 20px;
+    -webkit-background-size: 18px 20px;
+}
+
+.icon-sport-fav {
+    background-image: url("../images/icons/star-inactive.png");
+
+    background-size: auto 21px;
+    -moz-background-size: auto 21px;
+    -webkit-background-size: auto 21px;
+    
+    background-position: 15px 15px;
+}
+.icon-sport-fav.icon-sport-fav-active { background-image: url("../images/icons/star-active.png"); }
+
+.icon-sport-fav.icon-sport-fav-sport-list {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    background-position: 19px 10px;
+    z-index: 1;
+}
+
+.icon-share {
+    background-image:url("../images/icons/share.png");
+    background-position:  15px 17px;
+
+    background-size: 23px 18px;
+    -moz-background-size: 23px 18px;
+    -webkit-background-size: 23px 18px;
+}
+
+.icon-gear {
+    background-image: url(../images/icons/gear.png);
+    right: 0;
+    background-position: 50% 17px;
+    background-size: 18px;
+}
+.icon-flag {
+    background-image: url(../images/icons/flag.png);
+    right: 44px;
+    background-position: 50% 15px;
+    background-size: 14px;
+}
+
+/* retina icons */
+@media  (min-device-pixel-ratio: 1.5),
+(-webkit-min-device-pixel-ratio: 2),
+(min--moz-device-pixel-ratio: 2),
+(min-resolution: 2dppx),
+(min-resolution: 144dpi) {
+
+    .icon-list { background-image: url("../images/icons/list@2x.png"); }
+    .icon-refresh { background-image: url("../images/icons/refresh@2x.png"); }
+
+    .icon-sport-fav  { background-image: url("../images/icons/star-inactive@2x.png"); }
+    .icon-sport-fav.icon-sport-fav-active { background-image: url("../images/icons/star-active@2x.png"); }
+
+    /*.icon-sport-fav.icon-sport-fav-sport-list.icon-sport-fav-active { background-position: -21px 10px; }*/
+
+    .icon-share { background-image: url("../images/icons/share@2x.png"); }
+
+    .headlines-list .twitter-li a { background-image:url(../images/icons/twitter-bird@2x.png); }
+
+    .icon-gear { background-image: url(../images/icons/gear@2x.png); }
+    .icon-flag { background-image: url(../images/icons/flag@2x.png); }
+}
+
+@media (min-device-pixel-ratio: 3),
+(-webkit-min-device-pixel-ratio: 3),
+(min--moz-device-pixel-ratio: 3),
+(min-resolution: 3dppx) {
+
+    .icon-list { background-image: url("../images/icons/list@3x.png"); }
+    .icon-refresh { background-image: url("../images/icons/refresh@3x.png"); }
+    .icon-sport-fav { background-image: url("../images/icons/star-inactive@3x.png"); }
+
+    .icon-sport-fav.icon-sport-fav-active { background-image: url("../images/icons/star-active@3x.png"); }
+    /*.icon-sport-fav.icon-sport-fav-sport-list.icon-sport-fav-active { background-position: -41px 10px; }*/
+
+    .icon-share { background-image: url("../images/icons/share@3x.png"); }
+
+    .headlines-list .twitter-li a { background-image:url(../images/icons/twitter-bird@3x.png); }
+
+    .icon-gear { background-image: url(../images/icons/gear@3x.png); }
+    .icon-flag { background-image: url(../images/icons/flag@3x.png); }
+}

@@ -1,0 +1,16 @@
+<ul data-role="listview" class="form-list" data-divider-theme="c">
+    <li class="title" data-role="list-divider"><h4>You will receive notifications about sports that are "On"</h4></li>
+    {{#each notifications.lists}}
+    <li class="clearfix">
+        <label for="notification-sport-{{@index}}" {{#ifExceedLength this.title 23}}class="form-list-long-label"{{/ifExceedLength}}>
+            {{{this.title}}}
+        </label>
+        <div class="float-right">
+            <select name="{{this.id}}" id="notification-sport-{{@index}}" class="sport-slider" data-role="slider" data-mini="true">
+                <option value="false">OFF</option>
+                <option value="true">ON</option>
+            </select>
+        </div>
+    </li>
+    {{/each}}
+</ul>

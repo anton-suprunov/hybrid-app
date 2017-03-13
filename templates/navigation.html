@@ -1,0 +1,136 @@
+<div class="nav {{#if showSponsorLogo}}nav-with-sponsor{{/if}}">
+    <ul data-role="listview" data-list-type="panel" class="nav-list">
+
+        <li class="nav-header" data-role="list-divider">
+            <span class="nav-logo"></span>
+            <a href="#" class="link icon icon-flag icon-header" data-view="Notifications"></a>
+            <a href="#" class="link icon icon-gear icon-header" data-view="Settings"></a>
+        </li>
+
+        {{#if showSponsorLogo}}
+            <li class="nav-sponsor">
+                <div class="nav-sponsor-container">
+                    {{#if sponsorLogoURL}}
+                        <a href="{{sponsorLogoURL}}" class="nav-sponsor-link" rel="external"></a>
+                    {{/if}}
+                </div>
+            </li>
+        {{/if}}
+    </ul>
+
+    <div class="nav-iscroll-wrapper nav-iscroll-wrapper_main">
+        <ul data-role="listview" data-list-type="panel" class="nav-list nav-list_main">
+            <li class="nav-divider" data-role="list-divider">{{ appName }}</li>
+            <li class="nav-item">
+                <a href="#" data-param-sport="0" title="Event Calendar" data-param-page-id="scoreboard-page-0"
+                   class="ui-btn nav-btn link nav-sport-trigger {{#ifEq parentViewId 'scoreboard-page-0'}}ui-btn-active ui-state-persist{{/ifEq}}"
+                   {{#ifEq parentViewId 'scoreboard-page-0'}}data-active="true"{{/ifEq}} data-view="Scoreboard">Event Calendar</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" data-param-sport="0" title="News" data-param-page-id="headlines-page-0"
+                   class="ui-btn nav-btn link nav-sport-trigger {{#ifEq parentViewId 'headlines-page-0'}}ui-btn-active{{/ifEq}}"
+                   {{#ifEq parentViewId 'headlines-page-0'}}data-active="true"{{/ifEq}} data-view="Headlines">News</span>
+                </a>
+            </li>
+
+            <li class="nav-divider nav-divider_link" data-role="list-divider">
+                <a href="#" class="sub-panel-trigger nav-btn nav-btn_divider ui-icon-carat-r ui-btn-icon-right" data-target="sub-panel-favsports">Favorite sports</a>
+            </li>
+
+            {{! FAV SPORTS}}
+            {{#each sports}}
+            {{#ifEq params.allSports true}}{{else}}
+            {{#inArray ../../favSports @index}}
+                {{> navigation-sport parentViewName=../../../parentViewName }}
+            {{else}}
+                {{> navigation-sport className="hidden" parentViewName=../../../parentViewName }}
+            {{/inArray}}
+            {{/ifEq}}
+            {{/each}}
+
+
+            {{#if groupedSports}}
+                {{#each groupedSports}}
+                <li class="nav-divider nav-divider_link" data-role="list-divider">
+                    <a href="#" class="sub-panel-trigger nav-btn nav-btn_divider ui-icon-carat-r ui-btn-icon-right"
+                       data-target="sub-panel-sports-{{@index}}">{{category}}</a>
+                </li>
+                {{/each}}
+            {{else}}
+                <li class="nav-divider nav-divider_link" data-role="list-divider">
+                    <a href="#" class="sub-panel-trigger nav-btn nav-btn_divider ui-icon-carat-r ui-btn-icon-right"
+                       data-target="sub-panel-sports">All Sports</a>
+                </li>
+            {{/if}}
+
+        </ul>
+    </div>
+
+    <!-- All sports sub panel -->
+    {{#if groupedSports}}
+        {{#each groupedSports}}
+            <div class="ui-sub-panel sub-panel" data-id="sub-panel-sports-{{@index}}">
+                <ul class="nav-list nav-list_nested" data-role="listview" data-list-type="panel">
+                    <li class="sub-panel-close-wrapper nav-header">
+                        <a href="#" class="ui-btn ui-btn-icon-left ui-icon-carat-l sub-panel-close">
+                            {{category}}
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="nav-iscroll-wrapper">
+                    <ul class="nav-list nav-list_nested" data-role="listview" data-list-type="panel">
+                        {{#each this.sports}}
+                        {{#ifEq params.allSports true}}{{else}}
+                            {{> navigation-sport showFavourite=false parentViewName=../../../../parentViewName }}
+                        {{/ifEq}}
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+        {{/each}}
+    {{else}}
+        <div class="ui-sub-panel sub-panel" data-id="sub-panel-sports">
+            <ul class="nav-list nav-list_nested" data-role="listview" data-list-type="panel">
+                <li class="sub-panel-close-wrapper nav-header">
+                    <a href="#" class="ui-btn ui-btn-icon-left ui-icon-carat-l sub-panel-close">
+                        All Sports
+                    </a>
+                </li>
+            </ul>
+
+            <div class="nav-iscroll-wrapper">
+                <ul class="nav-list nav-list_nested" data-role="listview" data-list-type="panel">
+                    {{#each sports}}
+                    {{#ifEq params.allSports true}}{{else}}
+                        {{> navigation-sport showFavourite=false parentViewName=../../parentViewName }}
+                    {{/ifEq}}
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+    {{/if}}
+
+    <!-- Favorite sports sub panel -->
+    <div class="ui-sub-panel sub-panel" data-id="sub-panel-favsports">
+        <ul class="nav-list nav-list_nested fav-sports-select-list" data-role="listview" data-list-type="panel">
+            <li class="sub-panel-close-wrapper nav-header">
+                <a href="#" class="ui-btn ui-btn-icon-left ui-icon-carat-l sub-panel-close">
+                    Favorite Sports
+                </a>
+            </li>
+        </ul>
+
+        <div class="nav-iscroll-wrapper">
+            <ul class="nav-list nav-list_nested fav-sports-select-list" data-role="listview" data-list-type="panel">
+                {{#each sports}}
+                    {{#ifEq params.allSports true}}{{else}}
+                        {{> navigation-sport showFavourite=true favSports=../../favSports }}
+                    {{/ifEq}}
+                {{/each}}
+            </ul>
+        </div>
+    </div> <!-- favorite sports--->
+
+</div>

@@ -1,0 +1,144 @@
+.event {
+  background-color:transparent;
+  padding:.7em 1em;
+}
+
+.event__wrapper {
+  line-height: 40px;
+}
+
+.event__team-logo-img {
+  max-width: 50px;
+  display: block;
+}
+
+.event__team-name {
+  float: left;
+  font-size: 1.1em !important;
+  padding-left: 10px;
+  font-weight: 700 !important;
+}
+
+.event__team-result {
+  float:right;
+  font-size: 1.1em !important;
+}
+
+.event__status {
+  font-size: 1.1em !important;
+}
+
+.event__column {
+  float: left;
+
+  &.event__column_team {
+    width: 75%;
+    border-right: 1px solid #eee;
+    padding-right: 10px;
+    box-sizing: border-box;
+  }
+
+  &.event__column_status {
+    width: 25%;
+    padding-left: 10px;
+    box-sizing: border-box;
+  }
+}
+
+.event__add-to-calendar { display:none; }
+.ios .event__add-to-calendar {
+  display:block;
+  background: url("../images/icons/bell.png") repeat scroll 0 0 transparent;
+  height: 24px;
+  width: 20px;
+  padding:0 !important
+}
+
+
+/* icons for event.links */
+.event__links {
+  text-align: left;
+  white-space: normal;
+}
+
+.event__link {
+  display: inline-block;
+  min-height: 44px;
+  line-height: 44px;
+  padding-right: 20px;
+  font-size: 0.9em !important;
+  text-decoration: none;
+  color: #444 !important;
+}
+
+.event__links a.ui-btn {
+  border: 0 none;
+  border-radius: 0 0 0 0;
+  box-shadow: none;
+  position: relative;
+  z-index: 2;
+  padding: 5px 15px;
+  /* margin: 0 15px 17px 0; */
+  background-repeat: no-repeat;
+  background-color: transparent;
+  overflow: visible;
+  text-align: center;
+}
+
+.event-links a.ui-btn:last-child { margin-right:0; }
+
+.event-links a.ui-btn .event-button-text {
+  position:absolute;
+  font-size: 9px;
+  left: -10px;
+  padding: 0;
+  text-align: center;
+  top: 46px;
+  width: 64px;
+  text-shadow: none;
+}
+
+/*.event-links .ui-btn.link-Preview { background-image:url(../images/icons/events/event_preview.png) !important;  }
+.event-links .ui-btn.link-BoxScore { background-image:url(../images/icons/events/event_livestats.png) !important; }
+.event-links .ui-btn.link-Results { background-image:url(../images/icons/events/event_results.png) !important; }
+.event-links .ui-btn.link-Recap { background-image:url(../images/icons/events/event_preview.png) !important; }
+.event-links .ui-btn.link-Livestats { background-image:url(../images/icons/events/event_livestats.png) !important; }
+.event-links .ui-btn.link-Video { background-image:url(../images/icons/events/event_video.png) !important; }
+.event-links .ui-btn.link-Audio { background-image:url(../images/icons/events/event_audio.png) !important; }
+.event-links .ui-btn.link-Photos { background-image:url(../images/icons/events/event_photo.png) !important; }
+.event-links .ui-btn.link-Directions { background-image:url(../images/icons/events/event_directions.png) !important; }
+.event-links .ui-btn.link-Tickets { background-image:url(../images/icons/events/event_tickets.png) !important; }
+.event-links span { margin-right:0; }
+*/
+
+/* RETINA ICONS */
+@media only screen and (-webkit-min-device-pixel-ratio:1.5),
+only screen and (min--moz-device-pixel-ratio:1.5),
+only screen and (min-resolution:240dpi) {
+
+  .ios .schedule-list .add-to-calendar {
+    background-image: url("../images/icons/bell@2x.png");
+    -moz-background-size: 20px 24px;
+    -o-background-size: 20px 24px;
+    -webkit-background-size: 20px 24px;
+    background-size: 20px 24px
+  }
+
+  .event-links a.ui-btn {
+    -moz-background-size: 44px 44px;
+    -o-background-size: 44px 44px;
+    -webkit-background-size: 44px 44px;
+    background-size: 44px 44px
+  }
+
+  .event-links .ui-btn.link-Preview { background-image:url(../images/icons/events/event_preview@2x.png) !important; }
+  .event-links .ui-btn.link-BoxScore { background-image:url(../images/icons/events/event_livestats@2x.png) !important; }
+  .event-links .ui-btn.link-Results { background-image:url(../images/icons/events/event_results@2x.png) !important; }
+  .event-links .ui-btn.link-Recap { background-image:url(../images/icons/events/event_preview@2x.png) !important; }
+  .event-links .ui-btn.link-Livestats { background-image:url(../images/icons/events/event_livestats@2x.png) !important; }
+  .event-links .ui-btn.link-Video { background-image:url(../images/icons/events/event_video@2x.png) !important; }
+  .event-links .ui-btn.link-Audio { background-image:url(../images/icons/events/event_audio@2x.png) !important; }
+  .event-links .ui-btn.link-Photos { background-image:url(../images/icons/events/event_photo@2x.png) !important; }
+  .event-links .ui-btn.link-Directions { background-image:url(../images/icons/events/event_directions@2x.png) !important; }
+  .event-links .ui-btn.link-Tickets { background-image:url(../images/icons/events/event_tickets@2x.png) !important; }
+}

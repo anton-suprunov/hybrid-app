@@ -1,0 +1,39 @@
+/* ACTIVE STATE COLOR */
+.ui-header,
+.footer .ui-btn-active,
+.headlines-twitter-subtabs .main-trigger.ui-btn-active,
+.sports-panel ul li a.ui-btn-active,
+.ui-btn-active,
+.schedule-list .date-container > span:first-child,
+.nav-header {
+	background-image:-webkit-gradient(linear,left top,left bottom,from( @appColor*1.1 ),to( @appColor*0.9 )); 
+	background-image:-webkit-linear-gradient( @appColor*1.1,@appColor*0.9 );
+	background-image:   -moz-linear-gradient( @appColor*1.1,@appColor*0.9 ); 
+	background-image:    -ms-linear-gradient( @appColor*1.1,@appColor*0.9 ); 
+	background-image:     -o-linear-gradient( @appColor*1.1,@appColor*0.9 ); 
+	background-image:        linear-gradient( @appColor*1.1,@appColor*0.9 );
+}
+
+/* FOCUS COLOR
+.ui-focus,
+.ui-btn:focus {
+	-moz-box-shadow:inset 0 0 3px @appColor,0px 0 9px @appColor;
+	-webkit-box-shadow:inset 0 0 3px @appColor,0px 0 9px @appColor;
+	box-shadow:inset 0 0 3px @appColor,0px 0 9px @appColor;
+}
+*/
+
+.ui-input-text:focus,
+.ui-input-search:focus {
+	-moz-box-shadow:0 0 12px @appColor;
+	-webkit-box-shadow:0 0 12px @appColor;
+	box-shadow:0 0 12px @appColor;
+}
+
+.ui-mobile .ui-btn:focus {
+    box-shadow:inset 0 0 3px @appColor,0px 0 9px @appColor !important;
+}
+
+/* LINK COLOR */
+.ui-page-theme-a a,
+.ui-page-theme-a a:visited { color:@appColor }

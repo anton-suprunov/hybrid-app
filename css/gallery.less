@@ -1,0 +1,70 @@
+.mobile-gallery h1 { 
+	font-size:20px;
+	text-align:center;
+}
+.gallery-list { 
+	padding:10px 5px; 
+	overflow:hidden;
+	list-style: none outside none;
+	margin: 0;
+	overflow: hidden;
+}
+	.gallery-list li {
+		float: left;
+		height: auto;
+		margin-bottom: 7px;
+		margin-right: 0;
+		overflow: visible;
+		text-align: center;
+		width:50%;
+	}
+	
+	.gallery-list li.clear { display:none; margin:0; padding:0; }
+	.gallery-list li.clear.clear-2 { display:block; }
+	
+	.gallery-list li img  { display:block; margin:0 auto; outline:1px solid rgba(255,255,255,0.5) }
+	
+	.gallery-list li img.ipad-version { display:none }
+
+	/* hide the clear-2 from 320px; */
+	@media screen and (min-width:320px)  {  
+		.gallery-list li.clear.clear-2 { display:none; } 
+	}
+
+	/* 320px - 480px width - 4 images per row */
+	@media screen and (min-width:320px) and (max-width:479px)  {		
+		.gallery-list li { width: 25%; }
+		.gallery-list li.clear.clear-4 { display:block; }
+	}
+	
+	/* 480px - 640 width - 6 images per row */
+	@media screen and (min-width:480px) and (max-width:639px)  {
+		.gallery-list li { width: 16.6%; margin-bottom:9px }
+		.gallery-list li.clear.clear-6 { display:block; }
+	}
+	
+	/* 640 and higher - 4 big images per row */
+	@media screen and (min-width:640px) and (max-width:799px) {
+		.gallery-list li img.ipad-version { display:block }
+		.gallery-list li img.phone-version { display:none }
+		
+		.gallery-list li { width: 25%; margin-bottom:21px }
+		.gallery-list li.clear.clear-4 { display:block; }
+	}
+	
+	/* 800 and higher - 5 big photos  */
+	@media screen and (min-width:800px) and (max-width:959px) {
+		.gallery-list li img.ipad-version { display:block }
+		.gallery-list li img.phone-version { display:none }
+		
+		.gallery-list li { width: 20%; margin-bottom:23px }
+		.gallery-list li.clear.clear-5 { display:block; }
+	}
+	/* 960 and higher - 6 big photos  */
+	@media screen and (min-width:960px)  {
+		.gallery-list li img.ipad-version { display:block }
+		.gallery-list li img.phone-version { display:none }
+		
+		.gallery-list li { width: 16.6%; margin-bottom:24px }
+		.gallery-list li.clear.clear-6 { display:block; }
+	}

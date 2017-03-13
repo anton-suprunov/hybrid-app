@@ -1,0 +1,20 @@
+<div data-role="footer" data-position="fixed" data-id="footer" class="footer" data-theme="b" data-tap-toggle="false">
+    <div data-role="navbar">
+        <ul>
+            <li>
+                <a href="#" data-view="Scoreboard" class="link scoreboard-trigger footer-btn
+                    {{#ifEq footerBtn 'scores'}}ui-btn-active ui-state-persist{{/ifEq}}"
+                   data-param-page-id="scoreboard-page-{{activeSport}}">Scores</a>
+            </li>
+            <li class="footer-logo-block">
+                <span class="ui-btn footer-logo-container" onclick="return false;">
+                    <span class="footer-logo"></span>
+                </span>
+            </li>
+            <li>
+                <a href="#" data-view="Headlines" data-param-page-id="headlines-page-{{activeSport}}" class="link headlines-trigger footer-btn
+                    {{#ifEq footerBtn 'news'}}ui-btn-active ui-state-persist{{/ifEq}}">News</a>
+            </li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+<div data-role="navbar" class="{{className}} header-subtabs">
+    <ul>
+        {{#each links}}
+            {{#if this}}
+                <li>
+                    <a href="#" class="{{../../linkClass}} {{#if active}}ui-btn-active ui-state-persist{{/if}}"
+                    {{#each data}} data-{{@key}}="{{this}}" {{/each}}>{{{title}}}</a>
+                </li>
+            {{else}}
+                <li class="{{../../linkClass}}-empty"></li>
+            {{/if}}
+        {{/each}}
+    </ul>
+</div>

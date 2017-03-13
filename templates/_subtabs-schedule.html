@@ -1,0 +1,10 @@
+<div data-role="navbar" class="schedule-subtabs header-subtabs" data-theme="b">
+    <ul>
+        <li><a href="#" data-type="scoreboard" class="type-trigger ui-btn-active ui-state-persist">Scoreboard</a></li>
+        {{#if showStandings}}
+            <li><a href="#" data-type="standings" class="type-trigger">Standings</a></li>
+        {{else}}
+            <li><a href="#" data-type="schedule" class="type-trigger">Schedule</a></li>
+        {{/if}}
+    </ul>
+</div>

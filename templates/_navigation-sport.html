@@ -1,0 +1,16 @@
+{{#if showFavourite}}
+<li class="nav-item nav-sport {{className}}" data-sport="{{@index}}" data-icon="false">
+    <a href="#" class="ui-btn nav-btn sport-fav" data-sport="{{@index}}">{{{title}}}</a>
+    <div><a href="#" class="icon icon-sport-fav icon-sport-fav-sport-list {{#inArray favSports @index}}icon-sport-fav-active{{/inArray}}"
+        data-sport="{{@index}}" data-active-class="icon-sport-fav-active"></a></div>
+{{else}}
+    <li class="nav-item nav-sport {{className}}" data-sport="{{getSportPos this @index}}">
+        <a href="#" data-param-sport="{{getSportPos this @index}}"
+            class="ui-btn nav-btn link nav-sport-trigger {{#isActiveNavSport this @index}}ui-btn-active{{/isActiveNavSport}}"
+            title="{{{title}}}" {{#isActiveNavSport this @index}}data-active="true"{{/isActiveNavSport}}
+            data-view="{{parentViewName}}"
+            data-param-page-id="{{toLowerCase parentViewName}}-page-{{getSportPos this @index}}">
+        {{{title}}}
+    </a>
+{{/if}}
+</li>

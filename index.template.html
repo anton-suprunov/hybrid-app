@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <link rel="stylesheet" href="css/vendor.css" />
+    <link rel="stylesheet" href="css/main.css" />
+
+    <!-- remote css -->
+    <link rel="stylesheet" href="<%= website %>/info/boilerplate-frontrow.css" />
+
+    <title>FrontRow</title>
+</head>
+<body>
+<!-- empty page used as background during app launch -->
+<div data-role="page" data-url="default-page" id="first-page"></div>
+
+<!-- pull-to-refresh block, hidden by default -->
+<div class="ptr" data-role="none" style="display: none">
+    <span class="ui-btn-icon-notext ui-icon-arrow-u ptr-arrow"></span>
+    <span class="ptr-loader">
+        <img src="vendor/jquery-mobile/images/ajax-loader.gif" class="ptr-loader-image">
+    </span>
+</div>
+
+<!-- static pages -->
+<div class="hidden static-page" data-title="Message" data-back-button="true" data-id="message-page">
+    <div id="message-wrapper"><h4 id="message-container"></h4></div>
+</div>
+
+<script>
+    var ENV = {
+        test : '<%= test %>' === 'true'
+    };
+</script>
+
+<script type="text/javascript" src="vendor/require.js"></script>
+
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="js/bundle.js"></script>
+
+</body>
+</html>

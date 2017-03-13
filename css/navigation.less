@@ -1,0 +1,115 @@
+
+.ui-panel { position: fixed; }
+.ui-panel .ui-panel-inner {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+.nav-iscroll-wrapper {
+    position: absolute;
+    top: 55px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+.nav.nav-with-sponsor .nav-iscroll-wrapper.nav-iscroll-wrapper_main { top:116px }
+
+.nav .nav-header {
+    height:45px;
+    border-top:0;
+}
+
+.nav-logo {
+    background-image: url(../client-assets/branding-logo-small.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 0 50%;
+    height: 40px;
+    width: 50%;
+    display: block;
+}
+
+.nav .nav-item {
+    text-shadow:1px 1px 1px #111111;
+    height:40px;
+    overflow:hidden
+}
+
+.nav-list {
+    width:auto;
+    padding:0;
+    margin:0 !important;
+    list-style:none;
+    top:0;
+}
+
+.nav-list.nav-list_nested { width:100%; }
+
+.nav-list li.hidden { display: none; }
+.nav-list li:last-child { border-bottom:0; }
+
+.nav .nav-sponsor {
+    height: 60px;
+    text-align: center;
+    background:#fff;
+    padding:0;
+}
+
+.nav-sponsor-container {
+    background-image: url(../client-assets/sponsor-nav.png);
+    background-size: 272px 60px;
+    width: 100%;
+    height: 60px;
+    display: block;
+    position: relative;
+}
+
+.nav-sponsor-link {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.nav .nav-divider {
+    font-weight: 100 !important;
+    font-size: 12px;
+    text-transform: uppercase;
+    background-color: #222 !important;
+}
+
+.nav .nav-divider.nav-divider_link { padding:0; }
+
+.nav .nav-btn {
+    font-size:13px;
+    font-weight: 700;
+    line-height: 20px;
+    height: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.nav .nav-btn.ui-btn-active {
+    border-top:1px solid rgba(255, 255, 255, 0.3);
+    border-left:0;
+    border-right:0;
+}
+
+.nav .nav-btn.nav-btn_divider {
+    font-weight: 100 !important;
+    font-size: 12px;
+    color: #fff;
+    text-decoration: none;
+    padding: .5em 1.143em;
+    display: block;
+    height: 20px;
+    line-height: 20px;
+}

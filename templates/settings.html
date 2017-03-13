@@ -1,0 +1,68 @@
+<div class="settings-page">
+    <h2 class="settings-page-title">{{ client.appName }}</h2>
+    <p>Version <span id="ver-number">{{#ifEq verMinor ''}}{{ver}}{{else}}{{verMinor}}{{/ifEq}}</span></p>
+
+    <div>
+        <div class="ui-bar ui-bar-a">
+            <h3>Options</h3>
+        </div>
+        <div class="ui-body ui-body-a form-list-wrapper">
+            <ul data-role="listview" class="form-list form-list_nested form-list_settings" data-divider-theme="c">
+                <li class="clearfix">
+                    <label for="settings-timezone">Use local time zone</label>
+                    <div class="float-right">
+                        <select name="useLocalTimeZone" id="settings-timezone" data-role="slider" data-mini="true" class="settings-slider">
+                            <option value="false">OFF</option>
+                            <option value="true">ON</option>
+                        </select>
+                    </div>
+                </li>
+                <li class="clearfix">
+                    <label for="settings-scores">Hide scores</label>
+                    <div class="float-right">
+                        <select name="hideScores" id="settings-scores" data-role="slider" data-mini="true" class="settings-slider">
+                            <option value="false">OFF</option>
+                            <option value="true">ON</option>
+                        </select>
+                    </div>
+                </li>
+                <li class="clearfix">
+                    <label for="settings-article-textsize">Article text size</label>
+                    <div class="float-right">
+                        <select name="articleTextSize" id="settings-article-textsize" data-mini="true" class="settings-select">
+                            <option value="1">Large</option>
+                            <option value="2" selected>Medium</option>
+                            <option value="3">Small</option>
+                        </select>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div>
+        <div class="ui-bar ui-bar-a">
+            <h3>Feedback</h3>
+        </div>
+        <div class="ui-body ui-body-a form-list-wrapper">
+            <ul data-role="listview" class="form-list form-list_nested" data-divider-theme="c">
+                <li>
+                    <a href="http://prestosports.com/app-feedback" data-role="button" target="_blank"
+                       class="ui-btn external-link ui-icon-carat-r ui-btn-icon-right">Feedback</a>
+                </li>
+                <li>
+                    {{#ifEq platform 'android'}}
+                        <a href="market://details?id={{ packageIdPrefix }}{{ client.id }}"
+                           class="ui-btn system-browser-link ui-icon-carat-r ui-btn-icon-right">Rate in the App Store</a>
+                    {{else}}
+                        <a href="itms-apps://itunes.apple.com/us/app/domainsicle-domain-name-search/id{{ client.itunesId }}?ls=1&mt=8"
+                           class="ui-btn system-browser-link ui-icon-carat-r ui-btn-icon-right">Rate in the App Store</a>
+                    {{/ifEq}}
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <img src="images/prestosports.png" class="settings-ps-logo" alt="" style="width:250px" />
+
+</div>

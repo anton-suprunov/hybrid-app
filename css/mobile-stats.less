@@ -1,0 +1,594 @@
+/* ---------- ACCORDION LIVE SCORE BOARD ---------- */
+#live2 p { margin:0; }
+
+#live2 table {
+	width:100%;
+	border-collapse:collapse;
+	border-spacing: 0;
+}
+
+#live2 .accordion_content { background-color: rgb(36,36,36); }
+
+#live2 .score_board { border: 1px solid rgb(10,8,9); } 
+
+#live2 .score_board .board { border: 1px solid rgb(36,36,36); }
+
+#live2  .board .frame, #live2 .teams .frame { background-image: url("../images/boxscores/live2_bg.jpg"); }
+
+#live2 .board .frame {
+    border: 1px solid rgb(82,82,82);
+    position:relative
+}
+
+#live2 .board .frame .result {
+  float: left;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 8px;
+  text-align: center;
+  width: 35%;
+}
+
+#live2 .board .frame .result h2 { font-size: 14px;  text-shadow: 1px 1px 1px #000000; }
+
+#live2 .board .frame .result h3 { font-size: 13px; margin-top: 3px; }
+
+#live2 .board .frame .timer {
+	float: left;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	width: 30%;
+}
+
+#live2 .board .frame .timer .time,
+#live2 .board .frame .timer .half {
+	font-size: 12px;
+	font-weight: bold;
+	line-height: 15px;
+	text-align: center;
+}
+
+#live2  .teams {
+    border: 1px solid rgb(36,36,36);
+    background-color: rgb(36,36,36);
+}
+
+#live2 .teams .frame {
+    border: 1px solid rgb(82,82,82);
+    padding: 10px 5px;
+    position:relative
+}
+
+#live2 .team_stats .teams .frame  { margin-bottom:5px }
+
+#live2 .team {
+  float: left;
+  font-size: 13px;
+  font-weight: 900;
+  text-align: center;
+  text-shadow: 1px 1px 1px #000000;
+  width: 35%;
+}
+
+#live2 .team.right { float:right }
+
+#live2 .score_board .teams .frame .team .image,
+#live2 .line_up .teams .frame .team .image {
+    text-align: center;
+}
+
+#live2 .score_board .teams .frame .team .name,
+#live2 .line_up .teams .frame .team .name {
+    padding-top: 5px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+#live2 .versus {
+  float: left;
+  font-size: 14px;
+  font-weight: bold;
+  left: 50%;
+  margin-left: -9px;
+  margin-top: -7px;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+}
+
+#live2 .score_board .table .frame,
+#live2 .line_up .table .frame,
+#live2 .recent .frame {
+    background-color: rgb(209,209,209);
+    border: 1px solid rgb(82,82,82);
+    border-bottom: 0;
+    border-top: 0;
+	color:#333
+}
+
+#live2 .line_up .table .frame { border-left:0; border-right:0 }
+
+#live2 .frame .cell {
+    text-align: center;
+    font-weight: bold;
+    float: left;
+    padding: 7px 0 4px 0;
+    min-height:20px;
+    height:auto
+}
+
+#live2 .table .frame .clearfix {  border-bottom: 1px solid rgb(216,216,216); }
+
+#live2  .frame .cell_s { width: 10%; }
+
+#live2  .frame .cell_m { width: 20%; }
+
+#live2  .frame .cell_r,
+#live2  .frame .cell_r2  {
+  width:38%;
+  font-size:10px;
+  padding-left:1%;
+  padding-right:1%;
+}
+
+#live2  .frame .cell_r2 { font-size:12px; width:43%; position:relative }
+
+	#live2  .frame .player-number {
+		font-size: 18px;
+		line-height:50px
+	}
+	
+		#live2  .frame .player-number-home { float:right; margin-right:-15px }
+		#live2  .frame .player-number-visitor { float:left; margin-left:-12px }
+
+#live2  .frame .cell_l {
+    font-size: 12px;
+    width: 40%;
+    line-height:17px;
+}
+
+#live2  .frame .cell_all {
+    font-size: 12px;
+    float:none;
+    line-height:17px;
+}
+
+#live2  .frame .cell_penalty_totals {
+    font-size: 12px;
+    width: auto;
+    float:none;
+    height:auto;
+    padding-bottom:8px;
+    line-height:17px;
+    overflow:hidden
+}
+
+#live2  .frame .cell_penalty_totals span.l { float:left; width:45%; }
+#live2  .frame .cell_penalty_totals span.r { float:right; width:45% }
+
+
+#live2 .frame .cell.title { font-size: 15px; }
+
+#live2 .score_board .recent { color: rgb(51,51,51); }
+
+#live2 .score_board .recent .frame,
+#live2 .line_up .recent .frame {
+	background-color: #D8D8D8;
+	border-bottom: 1px solid #D1D1D1;
+}
+
+#live2 .score_board .recent .frame .toggle {
+  height: 20px;
+  line-height: 15px;
+  padding: 7px 0 4px;
+  position:relative;
+  cursor:pointer
+}
+
+#live2 .score_board .recent .frame .toggle .title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 12px;
+    color:#333333;
+    text-transform:uppercase
+}
+
+.recent .frame .toggle .arrow {
+    float: left;
+    position: absolute;
+    right: 10px;
+    text-align: center;
+    top: 7px;
+    width: 20%;
+}
+
+#live2 .score_board .recent .frame .play,
+#live2 .line_up .play {
+    border-top: 1px solid rgb(208,208,208);
+    padding: 8px 5px 8px 5px;
+    font-size:12px
+}
+
+#live2 .score_board .recent .frame .plays .play.center,
+#live2 .line_up .plays .play.center { text-align:center }
+
+#live2 .score_board .recent .frame .plays .play.period,
+#live2 .line_up .plays .play.period {
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+#live2 .line_up .play.title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+    position:relative
+}
+
+#live2 .score_board .recent .frame .plays .play .time,
+#live2 .line_up .plays .play .time {
+    float: left;
+    width: 20%;
+    text-align: center;
+    font-weight: bold;
+}
+
+#live2 .score_board .recent .frame .plays .play .text,
+#live2 .line_up .plays .play .text {
+    float: left;
+    width: 80%;
+}
+
+/* show more plays button */
+#live2 .recent .button {
+	float: none;
+	margin: 2px 1px;
+	overflow: hidden;
+	position: relative;
+	width: auto !important;
+        background:url(../images/boxscores/live-btn-bg.png) repeat-x;
+        border: 1px solid #9CA6B1;
+        border-radius: 4px;
+       -moz-border-radius:4px;
+       -webkit-border-radius: 4px;
+       -o-border-radius: 4px;
+       color: #FFFFFF;
+       cursor: pointer;
+        border-top:0; 
+        border-bottom:0;
+}
+
+
+#live2 .recent .button .team {
+	float: none;
+	padding: 13px 0;
+	text-align: center;
+	width: auto;
+}
+
+#live2 .recent .button .end { 
+	position: absolute;
+	right: 0;
+	top: 0; 
+}
+
+
+
+/* ---------- ACCORDION LIVE LINE UP ---------- */
+#live2 .line_up { border: 1px solid rgb(10,8,9); }
+
+#live2 .line_up .table {
+    background-color: rgb(194,194,194);
+    color: rgb(70,70,70);
+    margin:1px 1px 0;
+}
+
+#live2 .line_up .table .row,
+#live2 .line_up .other .row {
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    border-bottom: 1px solid rgb(212,212,212);
+    padding: 8px 5px 8px 5px;
+}
+
+#live2 .line_up .other .row {
+    text-align: left;
+    padding-left: 15px;
+}
+
+#live2 .line_up .other .row.title {
+    text-align: center;
+	font-size: 15px;
+    padding-left: 0;
+  position:relative
+}
+
+#live2 .line_up .table .row .data,
+#live2 .line_up .other .row .data {
+    float: left;
+    width: 30%;
+}
+
+#live2 .line_up .table .row .text,
+#live2 .line_up .other .row .text {
+    float: left;
+    width: 40%;
+}
+
+#live2 .line_up .other .row .text { width:70% }
+
+/* ---------- ACCORDION LIVE TEAM STATS ---------- */
+#team_stats { }
+
+#live2 .team_stats .teams {
+    padding: 2px 1px 2px 1px;
+    border-bottom: 1px solid rgb(0,28,60);
+}
+
+#live2  .button {
+	color:#fff;
+    float: left;
+    width: 50%;
+    background-image: url(../images/boxscores/live_btn.png);
+    background-position: left -39px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    margin-top:-2px;
+    margin-bottom:1px;
+    position:relative;
+    height:39px;
+}
+	
+#live2  .button.active { background-position: left top; }
+
+#live2  .button .team {
+    float: left;
+    width: 85%;
+    height: auto;
+    text-align: center;
+    font-weight: bold;
+    font-size: 12px;
+    padding: 13px 0;
+}
+
+#live2  .button .end {
+    width: 35px;
+    height: 39px;
+    background-image: url(../images/boxscores/live_btn.png);
+    background-position: right -39px;
+    background-repeat: no-repeat;
+    height: 27px;
+    padding-top: 12px;
+    position:absolute;
+    right:0;
+    top:0;
+}
+
+#live2  .button.active .end {
+    background-position: right top;
+}
+
+#live2  .button .end div {
+    background-image: url("../images/boxscores/arrow_down2.gif");
+    background-position: left center;
+    background-repeat: no-repeat;
+}
+
+#live2 .button.active .end div { background-image: url("../images/boxscores/arrow_up2.gif"); }
+
+#live2 .team_stats .table {
+  background-color: #C2C2C2;
+  color: #464646;
+  margin-top:37px
+}
+
+#live2 .team_stats .table a {   color: #464646; }
+
+#live2 .team_stats .table .titles {
+    border-bottom: 1px solid rgb(214,214,214);
+    padding: 12px 0 12px 0;
+}
+
+#live2 .team_stats .table .titles.center { text-align:center; font-weight:900 }
+
+#live2 .team_stats .table .titles DIV {
+    padding-top: 5px;
+    float: left;
+    text-align: center;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+#live2 .team_stats .table .titles .name {
+    width: 33%;
+    padding-left: 2%;
+}
+
+#live2 .team_stats .table .titles .data { width: 13%; }
+
+#live2 .team_stats .table .row {
+    border-bottom: 1px solid rgb(214,214,214);
+    font-weight: bold;
+    padding: 10px 0 10px 0;
+   -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+#live2 .team_stats .table .row.active {
+    background-color: rgb(67,71,83);
+    border: 1px solid rgb(115,118,123);
+}
+#live2 .team_stats .table .row .toggle { cursor: pointer; }
+
+.lacrosse-stats #live2 .team_stats .table .row .toggle,
+.hockey-stats #live2 .team_stats .table .row .toggle { cursor:default }
+
+#live2 .team_stats .table .row.active .toggle {
+    border-bottom: 1px solid rgb(54,57,66);
+    padding-bottom: 8px;
+    cursor: pointer;
+}
+
+#live2 .team_stats .table .row .toggle .name {
+    float: left;
+    width: 33%;
+    font-weight: bold;
+    padding-left: 2%;
+}
+
+#live2 .team_stats .table .row .toggle .data {
+    float: left;
+    min-width: 13%; 
+    text-align: center;
+    min-height:1px
+}
+
+#live2 .team_stats .table .row .toggle .data.arrow {
+    background-image: url("../images/boxscores/arrow_down2.gif");
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+#live2 .team_stats .table .row.active { color: rgb(255,255,255); }
+
+#live2 .team_stats .table .row.active .toggle .data.arrow { background-image: url("../images/boxscores/arrow_up2.gif"); }
+
+#live2 .team_stats .table .row .more .group { padding: 10px 0 10px 0; }
+
+#live2 .team_stats .table .row .more .group .data {
+    float: left;
+    min-width: 14%; 
+}
+
+#live2 .team_stats .table .row .more .group .data:FIRST-CHILD { min-width: 16%;  }
+
+#live2 .team_stats .table .row .more .group .data .name {
+    text-align: center;
+    font-weight: bold;
+}
+
+#live2 .team_stats .table .row .more .group .data .value { text-align: center; }
+
+/* HOCKEY SPECIFIC */
+#live2 .team_stats .table.hockey .titles .name,
+#live2 .team_stats .table.hockey .row .toggle .name {
+    min-width: 25%; 
+    width: 25%; 
+}
+
+#live2 .team_stats .table.hockey .titles .data,
+#live2 .team_stats .table.hockey .row .toggle .data {
+    min-width: 10%; 
+    width: 10%; 
+}
+
+/* FOOTBALL SPECIFIC */
+.footbal-stats#live2 .team_stats .table .titles .data { width:10.8%; }
+.footbal-stats#live2 .team_stats .table .row .toggle .data { min-width:10.8%; font-weight:100 }
+.footbal-stats#live2 .team_stats .table .titles .name { text-align:left }
+.footbal-stats#live2 .has-ball {
+	background:url(../images/boxscores/fb-has-ball.png) 50% 50% no-repeat;
+	text-indent:-9999px
+}
+
+/* BASEBALL/SOFTBALL SPECIFIC */
+#live2 .team_stats.scores-per-inning .table { margin-top:0; }
+#live2 .team_stats.scores-per-inning table {
+	width:100%;
+}
+	#live2 .team_stats.scores-per-inning th,
+	#live2 .team_stats.scores-per-inning td {
+		text-align:center;
+		padding:10px 0;
+		border-bottom:1px solid #D1D1D1;
+	}
+		#live2 .team_stats.scores-per-inning th { font-weight:900 }
+	#live2 .team_stats.scores-per-inning th.first-cell,
+	#live2 .team_stats.scores-per-inning td.first-cell {
+		padding-left:1%;
+		width:29%;
+		font-weight:900;
+		text-align:left;
+	}
+	
+/* BASKETBALL SPECIFIC */
+#live2 .bkb-boxscore-inprogress .clearfix { position:relative }
+.bkb-boxscore-inprogress__sep {
+	width:1px;
+	height:100%;
+	position:absolute;
+	left:50%;
+	top:0;
+	background:#999;
+}
+	
+/* SWIPE RELATED */
+.swipe-header {
+	background: #424242;
+	border-radius: 4px 4px 0 0;
+	height: 25px;
+	position: relative;
+}
+
+.swipe-header .dot-nav {
+	height: 7px;
+	left: 50%;
+	list-style: none outside none;
+	margin: 0;
+	min-width: 30px;
+	padding: 0;
+	position: absolute;
+	top: 10px;
+	margin-left:-25px;
+}
+.swipe-header .dot-nav.four { margin-left:-34px }
+	.swipe-header .dot-nav li {
+		float:left;
+		width:7px;
+		height:7px;
+		margin-right:10px;
+		background:url(../images/boxscores/boxscore-navigation-dots.png) no-repeat;
+	}
+	.swipe-header .dot-nav li.active { background-position:0 -7px }
+
+#swipe-wrapper {
+	overflow:hidden;
+	list-style:none
+}
+	
+#swipe-wrapper .swipe-screen { float:left; width:100% }
+
+.swipe-header #swipe-left {
+	background: url("../images/boxscores/arrow-l.png") no-repeat scroll 7px 6px transparent;
+	height: 27px;
+	left: 0;
+	position: absolute;
+	text-decoration: none;
+	top: 0;
+	width: 40px;
+}
+
+.swipe-header #swipe-right {
+	background: url("../images/boxscores/arrow-r.png") no-repeat scroll 24px 6px transparent;
+	height: 27px;
+	right: 0;
+	position: absolute;
+	text-decoration: none;
+	top: 0;
+	width: 40px;
+}
+
+#live2 .stats-heading {
+	color: #FFFFFF;
+	font-size: 12px;
+	text-align: left;
+	text-overflow: ellipsis;
+	text-shadow: 1px 1px 1px #000000;
+	white-space: nowrap;
+	background:#444;
+	font-weight:400;
+	display:block; 
+	padding:3px 5px
+}

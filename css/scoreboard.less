@@ -1,0 +1,191 @@
+/* boxscore styles */
+#live2,
+#live2 .ui-body-d { color:#fff; text-shadow:none; font-size:12px }
+
+/* remove dark border */
+#live2 .score_board,
+#live2 .team_stats .teams,
+#live2 .score_board .table > .frame,
+#live2 .line_up .table > .frame,
+#live2 .line_up { border:0; }
+
+#live2 .recent .frame { border-left:0; border-right:0; }
+
+#live2 .accordion_content,
+#live2 .team_stats .teams { background-color:transparent }
+
+#live2 .line_up .table { margin:0; }
+
+.boxscore-page .bg-logo { display:none }
+
+
+/* schedule list */
+.schedule-list li { border-bottom:1px solid #c8c8c8 }
+.schedule-list li.ui-last-child { border-bottom:none }
+
+/*
+.schedule-list .date-container {
+  border: 1px solid #AAAAAA;
+  font-size: 12px;
+  position: absolute;
+  text-align: center;
+  top: 6px;
+  width: 60px;
+
+  background-image: -moz-linear-gradient(#FFFFFF, #EEEEEE);
+  background-image:-webkit-gradient(linear,left top,left bottom,from(#FFFFFF),to(#EEEEEE));
+  background-image:-webkit-linear-gradient(#FFFFFF, #EEEEEE);
+  background-image:-moz-linear-gradient(#FFFFFF, #EEEEEE);
+  background-image:linear-gradient(#FFFFFF, #EEEEEE);
+
+  border-radius:6px;
+  -moz-border-radius:6px;
+  -webkit-border-radius:6px;
+}
+*/
+
+/*
+.schedule-list .date-container > span { display:block; padding:3px }
+.schedule-list .date-container > span:first-child {
+  border-bottom: 1px solid #AAAAAA;
+  overflow:hidden;
+  border-radius:5px 5px 0 0;
+  -moz-border-radius:5px 5px 0 0;
+  -webkit-border-radius:5px 5px 0 0;
+  color:#fff;
+  text-shadow:0 1px 0 #444;
+}
+*/
+
+//.schedule-list .event-expanded.date-inline  .clearfix { padding-left:70px; min-height:22px; }
+//.schedule-list .event-expanded .ui-li-desc { margin-top:0; white-space:normal }
+//.schedule-list .ui-li-desc { white-space:normal }
+
+//.event-expanded.event-hidden, .event-compact.event-hidden { display:none }
+
+.schedule-title {
+  margin:0;
+  text-transform: capitalize;
+}
+
+.schedule-stat { margin-bottom:25px }
+
+/*.schedule-stat .ui-block-d { border-right: 1px solid #B3B3B3 }*/
+
+.schedule-stat p {
+  font-size:13px;
+  padding:0;
+  margin:0;
+}
+
+.schedule-stat .ui-bar-c {
+  border-right:0;
+  text-align:center;
+  padding-left:0;
+  padding-right:0;
+}
+
+/* single event */
+.single-event-dates { position:relative; top:2px; background:#f2f2f2 }
+.single-event .ui-grid-b { position:relative; }
+.single-event p {
+  margin: 0;
+  overflow: hidden;
+  text-align: center;
+}
+
+.single-event-status { text-align:center; }
+
+.single-event-status-wrapper {
+  margin-top: 10px;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.single-event-status-wrapper div {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.single-event-wrapper {
+  border-top: 1px solid #B3B3B3;
+  font-size: 14px;
+  margin: 10px 0 0;
+  padding: 10px 0 0;
+  overflow:hidden;
+  font-weight:100
+}
+
+.single-event-wrapper.single-event-recap-preview .article-link {
+  display: block;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.single-event-wrapper.single-event-recap-preview .article-link p {
+  margin: 6px 0;
+  padding:0;
+  text-align:center
+}
+
+.single-event-wrapper img {
+  border: 2px solid #333333 !important;
+  display: block;
+  margin: 0 auto;
+  max-width: 98%;
+}
+
+.single-event .ui-bar-c { font-weight:100 }
+.single-event .ui-bar-c strong { font-weight:700; font-size:22px; }
+.single-event .ui-bar-c p { overflow:hidden; text-overflow:ellipsis; white-space:nowrap }
+
+/*.schedule-page .sport-container {
+  background: rgba(200,200,200,0.5);
+  height: 24px;
+  line-height: 24px;
+  margin-bottom: 10px;
+  padding-left: 15px !important;
+}*/
+
+//.schedule-list .with-sport-container .date-container { top:39px; }
+
+#calendar-confirmation .ui-content h3 { margin:0; }
+
+/* no zebra on mini-boxscore tables */
+.ui-content table tr:nth-child(2n) td,
+.ui-content table tr:nth-child(2n) th { background-color:transparent !important }
+
+//.schedule-list.expanded-view .with-sport-container .event-load:after { top:62px !important }
+//.schedule-list.expanded-view li .right-align { padding-right:15px }
+
+.schedule-page .type-container[data-type=schedule] .sport-container,
+.schedule-page .type-container[data-type=standings] .sport-container {
+  background: none repeat scroll 0 0 rgba(200, 200, 200, 0.5);
+  height: auto;
+  line-height: 22px;
+  margin-bottom: 10px;
+  padding: 5px 0 5px 15px;
+}
+
+.type-container.hidden {
+  display:block !important;
+  position:absolute;
+  left:-9999px;
+  top:-9999px
+}
+
+/* TODO:fix this! */
+//p.right-align { margin-right:2% }
+
+.setting-hideScores-true .event-result { display: none; }
+
+.event-date-local { display: none; }
+.setting-useLocalTimeZone-true .event-date-default { display: none; }
+.setting-useLocalTimeZone-true .event-date-local { display: inline; }
+
+.schedule-filter-wrapper {
+  margin-top:-10px;
+  margin-bottom:20px;
+}

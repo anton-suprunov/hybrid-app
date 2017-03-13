@@ -1,0 +1,174 @@
+.headlines-list span.date {
+    display:block;
+    font-size:0.8em;
+    color:#848484
+}
+
+.headlines-list .twitter-li a {
+    padding-left:50px !important;
+    background-image:url(../images/icons/twitter-bird.png);
+    background-repeat:no-repeat;
+    background-position:10px 50%;
+    background-size:30px 25px;
+}
+
+.headlines-list .ui-btn,
+.headlines-list .ui-btn:hover {
+    background-color: transparent;
+}
+
+.headlines-list.top-stories {
+    list-style:none;
+    padding:0;
+}
+
+.headlines-list.top-stories li {
+    padding:0 0 20px;
+    margin:0 0 20px;
+    border-bottom:1px solid #999;
+    border-bottom:0;
+    padding-bottom:0;
+    margin-bottom:0;
+}
+
+.headlines-list.top-stories li a {
+    text-decoration:none;
+    position:relative;
+    display:block;
+    text-align:center;
+}
+
+.headlines-list.top-stories li h3 {
+    margin-bottom:30px;
+    text-align:center;
+}
+
+.headlines-list.old-stories .title {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.headlines-list .link.ui-btn {
+    white-space: normal;
+}
+
+.video-page .page-body .date {
+    color:#333;
+    margin:0 0 5px
+}
+
+.video-page .page-body h1 {
+    font-size: 18px;
+    margin: 5px 0;
+    padding: 0;
+}
+
+/* font size settings */
+.setting-articleTextSize-1 .rich-v2 .article-text,
+.setting-articleTextSize-1 .video-page .page-body { font-size:1.2em; }
+
+.setting-articleTextSize-2 .rich-v2 .article-text,
+.setting-articleTextSize-2 .video-page .page-body { font-size:1em; }
+
+.setting-articleTextSize-3 .rich-v2 .article-text,
+.setting-articleTextSize-3 .video-page .page-body { font-size:0.8em; }
+
+
+.setting-articleTextSize-1 .article-title,
+.setting-articleTextSize-1 .video-page .page-body h1 {
+    font-size: 22px;
+}
+
+.setting-articleTextSize-2 .article-title,
+.setting-articleTextSize-2 .video-page .page-body h1 {
+    font-size: 18px;
+}
+
+.setting-articleTextSize-3 .article-title,
+.setting-articleTextSize-3 .video-page .page-body h1 {
+    font-size: 14px;
+}
+
+.headlines-list.top-stories img {
+    border:2px solid #333;
+    margin:0 auto;
+    padding:0;
+    display:block;
+    max-width:98%;
+}
+
+.headlines-list .video-play-button {
+    background:url(../images/icons/play.png) no-repeat;
+    width:36px;
+    height:36px;
+    position:absolute;
+    top:50%;
+    left:7px;
+    margin-top:-18px;
+}
+
+.headlines-list .video-thumbnail {
+    position:relative;
+    display:inline-block;
+    max-width:100%;
+}
+
+.headlines-list.top-stories .video-play-button {
+    background-color: rgba(255, 255, 255, 0.5);
+    background-position: 50% 50%;
+    border-radius: 4px 4px 4px 4px;
+    left: 50%;
+    margin: -26px 0 0 -26px;
+    padding: 8px;
+    top: 50%;
+}
+
+.headlines-list.top-stories .headlines-video-link { padding-left:0 !important }
+
+/* video link padding for the icon */
+.headlines-list .headlines-video-link { padding-left:50px !important; }
+
+/* separate video page */
+.video-page .video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+}
+
+.video-page .page-body p {
+    /*font-size: 14px;*/
+    /*line-height: 18px;*/
+    font-weight: 100;
+    margin:0;
+}
+
+.video-page iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.video-page video {
+    max-width: 100%;
+    height: auto;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio:1.5), only screen and (min--moz-device-pixel-ratio:1.5), only screen and (min-resolution:240dpi) {
+    .video-play-button {
+        background:url(../images/icons/play@2x.png) no-repeat;
+        background-size:36px 36px;
+    }
+}
+
+/* adjustments for responsive article */
+.article-body {
+    img { max-width: 100% }
+    h1 { font-size: 1.3em }
+    h2 { font-size: 1.2em }
+    h3 { font-size: 1.1em }
+    h4 { font-size: 1em }
+}

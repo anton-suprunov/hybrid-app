@@ -1,0 +1,6 @@
+<li class="nav-divider ui-bar-inherit" data-role="list-divider">Links</li>
+{{#each links}}
+<li class="nav-item">
+    <a href="{{url}}" class="ui-btn nav-btn {{#if external}} system-browser-link {{else}} external-link {{/if}}">{{title}}</a>
+</li>
+{{/each}}

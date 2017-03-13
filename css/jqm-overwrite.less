@@ -1,0 +1,102 @@
+/* jquery mobile overrides */
+.ui-mobile,
+.ui-page,
+.ui-mobile body { background-color: #f9f9f9; }
+
+.ui-mobile .ui-page-active[data-has-panel="true"],
+.ui-mobile .ui-page-active[data-has-panel="true"] .ui-content {
+    box-sizing: border-box;
+}
+
+.ui-mobile .ui-panel-wrapper { height: 100%; }
+.ui-mobile .ui-page-active[data-has-panel="true"] .ui-content { min-height:inherit }
+
+.ui-mobile .ui-btn.ui-btn-active {
+    border-color: #1f1f1f !important;
+    text-shadow: 0 1px 0 #111 !important;
+}
+
+.ui-header .ui-btn-icon-left { padding-left:1em }
+.ui-header .ui-btn-icon-left:after { display:none }
+
+/* change background color for "b" theme */
+.ui-bar-b,
+.ui-page-theme-b .ui-bar-inherit,
+html .ui-bar-b .ui-bar-inherit,
+html .ui-body-b .ui-bar-inherit,
+html body .ui-group-theme-b .ui-bar-inherit {
+    background-color:#333;
+    border-color:#333;
+}
+
+.ui-listview > li p { margin:0 }
+
+/* no background on content wrapper to show the bg logo */
+.ui-panel-content-wrap { background:none }
+
+.ui-btn-active { border-color:#444; }
+
+.ui-header .ui-title {
+    font-family: "Abel";
+    text-transform: uppercase;
+    position: relative;
+    top: 1px;
+    color: #fff;
+    text-shadow: 0 -1px 0 #111;
+
+    font-size: 1.25em;
+    min-height: 1.75em;
+    line-height: 1.75em;
+    padding: 0.465em 0;
+    font-weight: 400;
+}
+
+/* wider header title to avoid truncation */
+@media screen and (min-width:320px) {
+    .sub-page .ui-header .ui-title { overflow: visible; }
+
+    .schedule-page .ui-header .ui-title,
+    .headlines-page .ui-header .ui-title {
+        margin: 0 15%;
+    }
+}
+
+@media screen and (min-width:320px) and (max-width:479px) {
+    .ui-page.sub-page .ui-header .ui-title { margin-left:27% }
+}
+
+
+.ui-header .ui-btn { margin-top:7px }
+
+.ui-panel { background:#424242; }
+.ui-panel-inner { padding:0; }
+
+.ui-content .ui-listview.message-list { margin-bottom:15px }
+
+/* tables */
+.ui-content table {
+    font-weight:100;
+    text-align:left;
+    width:100%;
+    font-size:14px;
+    border-collapse:collapse
+}
+
+.ui-content table td,
+.ui-content table th { padding:5px 3px; text-align:left }
+
+.ui-content table tr:nth-child(2n) td,
+.ui-content table tr:nth-child(2n) th { background-color:rgba(200, 200, 200, 0.5) }
+
+/* ui dialog  */
+.ui-dialog { background-color: rgba(34,34,34,0.25) !important; }
+.ui-dialog.ui-overlay-a  { background-image: none; }
+
+.ui-listview > .ui-li-divider {
+    font-family: "Abel";
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1em;
+    padding-top: .3em;
+    padding-bottom: .3em;
+}

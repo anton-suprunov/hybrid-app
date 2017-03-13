@@ -1,0 +1,15 @@
+<div data-role="page" id="{{pageId}}" data-ga-title="{{gaTitle}}" data-page-url="{{url}}" class="{{pageClass}}"
+     data-url="#{{pageId}}" data-has-panel="true">
+
+    <div data-role="panel" data-display="push" data-theme="b"></div>
+
+    {{> header}}
+
+    <div class="ui-panel-wrapper {{#if refreshable}}ptr-content{{/if}}">
+        <div data-role="content">
+            <div class="page-body">{{{page}}}</div>
+        </div>
+    </div>
+
+    {{> footer}}
+</div>

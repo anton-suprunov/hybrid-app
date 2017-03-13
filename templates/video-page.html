@@ -1,0 +1,13 @@
+<div class="video-container" data-thumbnail="{{ thumbnail }}">
+    {{#ifEq type 'html5'}}
+        <video controls autoplay preload="auto" width="100%" poster="{{thumbnail}}">
+            <source src="{{path}}" type='video/mp4' />
+            Video is not supported.
+        </video>
+    {{else}}
+        <iframe src="http://www.youtube.com/embed/{{youtubeId}}?html5=1&autoplay=1" frameborder="0" allowfullscreen></iframe>
+    {{/ifEq}}
+</div>
+<h1>{{title}}</h1>
+<p class="date">{{date}}</p>
+<p class="leadin">{{leadin}}</p>
