@@ -1,11 +1,11 @@
 {
-  "id": "frdev",
-  "name": "Front Row Dev 1",
+  "id": "hybridAppId",
+  "name": "HybridAppName",
   "dev": true,
-  "website": "http://dev.frontrow.prestosports.com",
-  "websitePublic": "http://dev.frontrow.prestosports.com",
-  "appName": "Front Row Dev 1",
-  "itunesId": "529309994",
+  "website": "",
+  "websitePublic": "",
+  "appName": "HybridAppFullName",
+  "itunesId": "",
   "urlParams": {
     "schedule": {
       "showTimeZone": true,
@@ -13,185 +13,9 @@
 	  "filter" : false
     }
   },
-  "twitterHashtag": "#GoMatadors",
+  "twitterHashtag": "#hashtag",
   "showSponsorLogo": true,
-  "sponsorLogoURL": "http://prestosports.com",
+  "sponsorLogoURL": "",
   "GA": "UA-40850662-2",
-  "sports": [
-    {
-      "title": "All Sports",
-      "code": "",
-      "urls": {
-        "schedule": "/composite",
-        "headlines": "/landing/headlines-featured"
-      },
-      "params": {
-        "allSports": true,
-        "twitter": true
-      }
-    },
-    {
-      "title": "Baseball",
-      "code": "bsb",
-      "urls": {
-        "schedule": "/sports/bsb/composite",
-        "headlines": "/sports/bsb/headlines-featured"
-      }
-    },
-    {
-      "title": "M. Basketball",
-      "code": "mbkb",
-      "urls": {
-        "schedule": "/sports/mbkb/composite",
-        "headlines": "/sports/mbkb/headlines-featured"
-      }
-    },
-    {
-      "title": "W. Basketball",
-      "code": "wbkb",
-      "urls": {
-        "schedule": "/sports/wbkb/composite",
-        "headlines": "/sports/wbkb/headlines-featured"
-      }
-    },
-    {
-      "title": "Cross Country",
-      "code": "xc",
-      "urls": {
-        "schedule": "/sports/xc/composite",
-        "headlines": "/sports/xc/headlines-featured"
-      }
-    },
-    {
-      "title": "Equestrian",
-      "code": "equest",
-      "urls": {
-        "schedule": "/sports/equest/composite",
-        "headlines": "/sports/equest/headlines-featured"
-      }
-    },
-    {
-      "title": "Football",
-      "code": "fball",
-      "urls": {
-        "schedule": "/sports/fball/composite",
-        "headlines": "/sports/fball/headlines-featured"
-      },
-      "params": {
-        "twitter": true
-      }
-    },
-    {
-      "title": "Field Hockey",
-      "code": "fh",
-      "urls": {
-        "schedule": "/sports/fh/composite",
-        "headlines": "/sports/fh/headlines-featured"
-      }
-    },
-    {
-      "title": "Golf",
-      "code": "golf",
-      "urls": {
-        "schedule": "/sports/golf/composite",
-        "headlines": "/sports/golf/headlines-featured"
-      }
-    },
-    {
-      "title": "M. Ice Hockey",
-      "code": "mice",
-      "urls": {
-        "schedule": "/sports/mice/composite",
-        "headlines": "/sports/mice/headlines-featured"
-      }
-    },
-    {
-      "title": "W. Ice Hockey",
-      "code": "wice",
-      "urls": {
-        "schedule": "/sports/wice/composite",
-        "headlines": "/sports/wice/headlines-featured"
-      }
-    },
-    {
-      "title": "M. Lacrosse",
-      "code": "mlax",
-      "urls": {
-        "schedule": "/sports/mlax/composite",
-        "headlines": "/sports/mlax/headlines-featured"
-      }
-    },
-    {
-      "title": "W. Lacrosse",
-      "code": "wlax",
-      "urls": {
-        "schedule": "/sports/wlax/composite",
-        "headlines": "/sports/wlax/headlines-featured"
-      }
-    },
-    {
-      "title": "Softball",
-      "code": "sball",
-      "urls": {
-        "schedule": "/sports/sball/composite",
-        "headlines": "/sports/sball/headlines-featured"
-      }
-    },
-    {
-      "title": "M. Soccer",
-      "code": "msoc",
-      "urls": {
-        "schedule": "/sports/msoc/composite",
-        "headlines": "/sports/msoc/headlines-featured"
-      }
-    },
-    {
-      "title": "W. Soccer",
-      "code": "wsoc",
-      "urls": {
-        "schedule": "/sports/wsoc/composite",
-        "headlines": "/sports/wsoc/headlines-featured"
-      }
-    },
-    {
-      "title": "Swimming &amp; Diving",
-      "code": "swimdive",
-      "urls": {
-        "schedule": "/sports/swimdive/composite",
-        "headlines": "/sports/swimdive/headlines-featured"
-      }
-    },
-    {
-      "title": "M. Tennis",
-      "code": "mten",
-      "urls": {
-        "schedule": "/sports/mten/composite",
-        "headlines": "/sports/mten/headlines-featured"
-      }
-    },
-    {
-      "title": "W. Tennis",
-      "code": "wten",
-      "urls": {
-        "schedule": "/sports/wten/composite",
-        "headlines": "/sports/wten/headlines-featured"
-      }
-    },
-    {
-      "title": "Track &amp; Field",
-      "code": "track",
-      "urls": {
-        "schedule": "/sports/track/composite",
-        "headlines": "/sports/track/headlines-featured"
-      }
-    },
-    {
-      "title": "W. Volleyball",
-      "code": "wvball",
-      "urls": {
-        "schedule": "/sports/wvball/composite",
-        "headlines": "/sports/wvball/headlines-featured"
-      }
-    }
-  ]
+  "sports": []
 }

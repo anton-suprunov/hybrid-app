@@ -43,7 +43,7 @@ var config = {
 		persist : 'ui-state-persist'
 	},
 
-	packageIdPrefix : 'com.prestosports.',
+	packageIdPrefix : '',
 
 	broadcasts : {
 		analyticsEndPoint : '/action/broadcast/analyticsTrackingInfo.json',
@@ -52,7 +52,7 @@ var config = {
 		analyticsLib : 'http://www.google-analytics.com/analytics.js'
 	},
 
-	jwplayerKey : "U70h5kMCzDUP/AfuTR7bX7SXGU43kYmLDh6ibDudmKg=",
+	jwplayerKey : "",
 
 	// app will lock in portrait mode till this pixel width
 	portraitOrientationLock : 415

@@ -94,9 +94,6 @@ var BroadcastPageView = Backbone.View.extend({
             stretching : 'fill',
             width : "100%",
 
-            abouttext: 'PrestoSports Broadcasting Player',
-            aboutlink: 'http://prestosports.com/services/broadcasting/',
-
             sharing : {
                 link : this.data.sharingURL
             }
@@ -213,7 +210,7 @@ var BroadcastPageView = Backbone.View.extend({
 
     _sendAnalyticsEvent : function(eventType) {
         if (this.gaEnabled) {
-            window.broadcastingGA('broadcastGenericTracking.send', 'event', 'PrestoSports Broadcast', eventType, this.data.channelTitle);
+            window.broadcastingGA('broadcastGenericTracking.send', 'event', '', eventType, this.data.channelTitle);
         }
     },
 
